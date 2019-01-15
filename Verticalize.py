@@ -34,8 +34,8 @@ class verticalize(object):
         # Deleting unneded helper variables
         del(ordered_cols, melt_cols, diff, cols)
     
-        # Create 'brand' and 'item' variable and strip unnecessary strings
-        df['brand'] = df['variable_original'].apply(lambda x: x.split(sep=separator)[1])
+        # Create '9buect' and 'item' variable and strip unnecessary strings
+        df['object'] = df['variable_original'].apply(lambda x: x.split(sep=separator)[1])
         df['variable'] = df['variable_original'].map(lambda x: x.split(sep=separator)[0] 
                                                         if x.count(separator)<=1 
                                                         else x.split(sep=separator)[0]+'_'+x.split(sep=separator)[2])
